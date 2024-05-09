@@ -1,8 +1,8 @@
-import { HtagProps } from "./Htag.props";
-import styles from "./Htag.module.css";
+import { HProps } from "./H.props";
+import styles from "./H.module.css";
 
-export default function Htag({ tag, children }: HtagProps): JSX.Element {
-  switch (tag) {
+export function H({ size, children }: HProps): JSX.Element {
+  switch (size) {
     case "h1":
       return <h1 className={styles.h1}>{children}</h1>;
     case "h2":
