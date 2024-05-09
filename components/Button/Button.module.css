@@ -1,5 +1,8 @@
 .button {
-  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  font-weight: 600;
   font-size: 14px;
   line-height: 14px;
   outline: none;
@@ -8,8 +11,7 @@
 }
 
 .primary {
-  padding: 10px;
-  color: var(--white);
+  color: var(--black);
   border: none;
   background-color: var(--primary);
   transition: background-color 200ms ease-in-out;
@@ -20,14 +22,23 @@
 }
 
 .ghost {
-  padding: 10px 30px 10px 10px;
   color: var(--black);
   border: 1px solid var(--white-smoke);
   background-color: var(--white);
-  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out, border-color 200ms ease-in-out;
 }
 
 .ghost:hover {
-  color: var(--white);
   background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.arrow {
+  margin-left: 10px;
+  transform: translateX(-50%);
+  transition: transform 200ms ease-in-out;
+}
+
+.button:hover .arrow {
+  transform: translateX(30%);
 }

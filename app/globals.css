@@ -30,14 +30,14 @@ li {
 :root {
   --black: #3b434e;
   --white: #fff;
-  --primary: #7653fc;
-  --primary-hover: #6344df;
+  --primary: #5ecf70;
+  --primary-hover: #93f09c;
   --ghost-white: #f9f8ff;
   --bright-gray: #f5f6f8;
   --white-smoke: #ebebeb;
-  --blue: #b3c0d9;
   --red: #de0000;
   --orange: #fc836d;
-  --green: #1dc37e;
-  --green-light: #c8f8e4;
+  --blue: #5eabcf;
+  --blue-light: #a2d0e6;
+  --steel-blue: #b3c0d9;
 }

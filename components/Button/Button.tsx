@@ -1,8 +1,9 @@
 import { ButtonProps } from "./Button.props";
-import styles from "./Button.module.css";
 import cn from "classnames";
+import styles from "./Button.module.css";
+import ArrowImage from "./arrow.svg";
 
-export function Button({ appearance, children, ...props }: ButtonProps): JSX.Element {
+export function Button({ appearance, children, arrowImg = false, ...props }: ButtonProps): JSX.Element {
   return (
     <button
       className={cn(styles.button, {
@@ -12,6 +13,7 @@ export function Button({ appearance, children, ...props }: ButtonProps): JSX.Ele
       {...props}
     >
       {children}
+      {arrowImg && <ArrowImage className={styles.arrow} />}
     </button>
   );
 }

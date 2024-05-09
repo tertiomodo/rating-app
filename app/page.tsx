@@ -1,15 +1,22 @@
-import { Htag, Button } from "@/components";
-import Image from "next/image";
+import { H, Button, P, Tag } from "@/components";
 
 export default function Home() {
   return (
     <>
-      <Htag tag="h1">Привет мир!</Htag>
-      <Image src="./next.svg" alt="Next logo" width={100} height={20} priority />
+      <H size="h1">Привет мир!</H>
+      <H size="h2">Привет мир!</H>
+      <H size="h3">Привет мир!</H>
       <Button disabled appearance="primary">
         Primary button
       </Button>
-      <Button appearance="ghost">Ghost button</Button>
+      <Button appearance="ghost" arrowImg={true}>
+        Button with arrow
+      </Button>
+      <Button appearance="ghost">Button without arrow</Button>
+      <P size="L">Large</P>
+      <P size="M">Medium</P>
+      <P size="S">Small</P>
+      <Tag>This is tag</Tag>
     </>
   );
 }
