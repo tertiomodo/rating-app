@@ -21,14 +21,14 @@
   background-color: var(--primary-hover);
 }
 
-.ghost {
+.white {
   color: var(--black);
   border: 1px solid var(--white-smoke);
   background-color: var(--white);
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out, border-color 200ms ease-in-out;
 }
 
-.ghost:hover {
+.white:hover {
   background-color: var(--primary-hover);
   border-color: var(--primary-hover);
 }
