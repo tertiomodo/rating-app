@@ -6,17 +6,27 @@ export default function Home() {
       <H size="h1">Привет мир!</H>
       <H size="h2">Привет мир!</H>
       <H size="h3">Привет мир!</H>
-      <Button disabled appearance="primary">
+      <Button disabled color="primary">
         Primary button
       </Button>
-      <Button appearance="ghost" arrowImg={true}>
+      <Button color="white" arrowImg={true}>
         Button with arrow
       </Button>
-      <Button appearance="ghost">Button without arrow</Button>
+      <Button color="white">Button without arrow</Button>
       <P size="L">Large</P>
       <P size="M">Medium</P>
       <P size="S">Small</P>
-      <Tag>This is tag</Tag>
+      <Tag size="L" color="primary" link="http://www.google.com">
+        primary
+      </Tag>
+      <Tag color="white">white</Tag>
+      <Tag color="blue">blue</Tag>
+      <Tag color="red" link="http://www.google.com">
+        red
+      </Tag>
+      <Tag size="L" color="gray">
+        gray
+      </Tag>
     </>
   );
 }
