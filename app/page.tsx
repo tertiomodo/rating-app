@@ -1,4 +1,4 @@
-import { H, Button, P, Tag, Counter } from "@/components";
+import { H, Button, P, Tag, Counter, Rating } from "@/components";
 
 export default function Home() {
   return (
@@ -26,6 +26,7 @@ export default function Home() {
         red
       </Tag>
       <Tag color="gray">gray</Tag>
+      <Rating rating={3} />
     </>
   );
 }
