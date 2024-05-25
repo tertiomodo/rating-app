@@ -1,9 +1,11 @@
 .stars {
   display: flex;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.star {
-  cursor: pointer;
+.star:not(:last-child) {
+  margin-right: 5px;
 }
 
 .filled {

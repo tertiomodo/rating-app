@@ -26,7 +26,7 @@ export default function Home() {
         red
       </Tag>
       <Tag color="gray">gray</Tag>
-      <Rating rating={3} />
+      <Rating isEditable rating={2} />
     </>
   );
 }
