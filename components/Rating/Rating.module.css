@@ -1,6 +1,9 @@
 .stars {
   display: flex;
   width: fit-content;
+}
+
+.editable {
   cursor: pointer;
 }
 
