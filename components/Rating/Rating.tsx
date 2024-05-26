@@ -42,6 +42,16 @@ export function Rating({ isEditable = false, rating, setRating }: RatingProps): 
     }
   };
 
+  const clickHandler = (e: React.MouseEvent<HTMLSpanElement>) => {
+    const currentId = Number(e.currentTarget.dataset.id);
+    setRatingState((prev) => ({ ...prev, click: currentId + 1 }));
+  };
+
+  const hoverHandler = (e: React.MouseEvent<HTMLSpanElement>) => {
+    const currentId = Number(e.currentTarget.dataset.id);
+    setRatingState((prev) => ({ ...prev, hover: currentId + 1 }));
+  };
+
   return (
     <div
       className={styles.stars}
@@ -51,19 +61,7 @@ export function Rating({ isEditable = false, rating, setRating }: RatingProps): 
     >
       {ratingArray.map((rating, index) => {
         return (
-          <span
-            onClick={(e) => {
-              const currentId = Number(e.currentTarget.dataset.id);
-              setRatingState((prev) => ({ ...prev, click: currentId + 1 }));
-            }}
-            onMouseEnter={(e) => {
-              const currentId = Number(e.currentTarget.dataset.id);
-              setRatingState((prev) => ({ ...prev, hover: currentId + 1 }));
-            }}
-            key={index}
-            data-id={index}
-            className={styles.star}
-          >
+          <span onClick={clickHandler} onMouseEnter={hoverHandler} key={index} data-id={index} className={styles.star}>
             {rating}
           </span>
         );
