@@ -7,14 +7,13 @@ import cn from "classnames";
 
 export function Rating({ isEditable = false, rating, setRating }: RatingProps): JSX.Element {
   const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
-  const [ratingState, setRatingState] = useState(rating);
 
   useEffect(() => {
     cunstuctRating(rating);
   }, [rating]);
 
   const cunstuctRating = (currentRating: number) => {
-    const updatedArray = ratingArray.map((rating: JSX.Element, index: number) => {
+    const updatedArray = ratingArray.map((_, index: number) => {
       return (
         <svg
           className={cn({ [styles.filled]: index < currentRating })}
@@ -34,8 +33,8 @@ export function Rating({ isEditable = false, rating, setRating }: RatingProps): 
   };
 
   const clickHandler = (currentRating: number) => {
-    if (isEditable) {
-      setRatingState(currentRating);
+    if (isEditable && setRating) {
+      setRating(currentRating);
     }
   };
 
@@ -45,8 +44,14 @@ export function Rating({ isEditable = false, rating, setRating }: RatingProps): 
     }
   };
 
+  const keyHandler = (currentRating: number, e: React.KeyboardEvent<HTMLSpanElement>) => {
+    if (isEditable && e.code === "Space" && setRating) {
+      setRating(currentRating);
+    }
+  };
+
   return (
-    <div className={cn(styles.stars, { [styles.editable]: isEditable })} onMouseLeave={() => hoverHandler(ratingState)}>
+    <div className={cn(styles.stars, { [styles.editable]: isEditable })} onMouseLeave={() => hoverHandler(rating)}>
       {ratingArray.map((rating, index) => {
         return (
           <span
@@ -54,6 +59,8 @@ export function Rating({ isEditable = false, rating, setRating }: RatingProps): 
             onMouseEnter={() => hoverHandler(index + 1)}
             key={index}
             className={styles.star}
+            tabIndex={isEditable ? 0 : -1}
+            onKeyDown={(e) => keyHandler(index + 1, e)}
           >
             {rating}
           </span>
