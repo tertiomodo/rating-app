@@ -1,0 +1,16 @@
+.stars {
+  display: flex;
+  width: fit-content;
+}
+
+.editable {
+  cursor: pointer;
+}
+
+.star:not(:last-child) {
+  margin-right: 5px;
+}
+
+.filled {
+  fill: var(--primary);
+}
