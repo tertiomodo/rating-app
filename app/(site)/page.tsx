@@ -32,6 +32,7 @@ export default function Home() {
       </Tag>
       <Tag color="gray">gray</Tag>
       <Rating isEditable rating={rating} setRating={setRating} />
+      <h2 style={{ color: "#00b900" }}>Main (app/page.tsx)</h2>
     </>
   );
 }
