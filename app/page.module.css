@@ -1,0 +1,27 @@
+.wrapper {
+  display: grid;
+  grid-template:
+    "sidebar body body body body" 100px
+    "footer footer footer footer footer" 60px
+    / 1fr 1fr 1fr 1fr 1fr;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgb(176 208 147);
+}
+
+.body {
+  grid-area: body;
+  background-color: rgb(216 139 139);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgb(173 137 207);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(234 234 135);
+}
