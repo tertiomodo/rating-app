@@ -1,3 +1,7 @@
+export * from "./Header/Header";
+export * from "./Body/Body";
+export * from "./Sidebar/Sidebar";
+export * from "./Footer/Footer";
 export * from "./H/H";
 export * from "./Button/Button";
 export * from "./P/P";

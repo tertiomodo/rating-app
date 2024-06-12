@@ -1,14 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { H, Button, P, Tag, Counter, Rating } from "@/components";
+import { Header, Body, Sidebar, Footer, H, Button, P, Tag, Counter, Rating } from "@/components";
+import styles from "./page.module.css";
 
 export default function Home() {
   const [rating, setRating] = useState(3);
 
   return (
-    <>
-      <H size="h1">Привет мир!</H>
+    <div className={styles.wrapper}>
+      {/* <Header customClass={styles.header} /> */}
+      <Body customClass={styles.body} />
+      <Sidebar customClass={styles.sidebar} />
+      <Footer customClass={styles.footer} />
+      {/* <H size="h1">Привет мир!</H>
       <H size="h2">Привет мир!</H>
       <H size="h3">Привет мир!</H>
       <Counter />
@@ -32,7 +37,7 @@ export default function Home() {
       </Tag>
       <Tag color="gray">gray</Tag>
       <Rating isEditable rating={rating} setRating={setRating} />
-      <h2 style={{ color: "#00b900" }}>Main (app/page.tsx)</h2>
-    </>
+      <h2 style={{ color: "#00b900" }}>Main (app/page.tsx)</h2> */}
+    </div>
   );
 }

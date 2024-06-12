@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
-import "../globals.css";
+import "./globals.css";
 
 const noto_sans = Noto_Sans({
   subsets: ["cyrillic"],
@@ -20,10 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={noto_sans.className}>
-        <h2 style={{ color: "#008000" }}>Common layout (app/layout.tsx)</h2>
-        {children}
-      </body>
+      <body className={noto_sans.className}>{children}</body>
     </html>
   );
 }
