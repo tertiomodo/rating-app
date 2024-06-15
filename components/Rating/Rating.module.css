@@ -1,6 +1,7 @@
 .stars {
   display: flex;
   width: fit-content;
+  min-height: 24px;
 }
 
 .editable {

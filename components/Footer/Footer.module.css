@@ -1,0 +1,32 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  gap: 10px;
+  min-height: 72px;
+  padding: 10px 32px;
+  background-color: var(--primary);
+}
+
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--white);
+}
+
+.link {
+  transition: color 200ms ease-in-out;
+}
+
+.link:hover {
+  color: var(--black);
+}
+
+@media (width >= 768px) {
+  .footer {
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 40px;
+  }
+}

@@ -1,43 +1,12 @@
-"use client";
-
-import { useState } from "react";
-import { Header, Body, Sidebar, Footer, H, Button, P, Tag, Counter, Rating } from "@/components";
+import { Body, Sidebar, Footer } from "@/components";
 import styles from "./page.module.css";
 
 export default function Home() {
-  const [rating, setRating] = useState(3);
-
   return (
     <div className={styles.wrapper}>
-      {/* <Header customClass={styles.header} /> */}
       <Body customClass={styles.body} />
       <Sidebar customClass={styles.sidebar} />
       <Footer customClass={styles.footer} />
-      {/* <H size="h1">Привет мир!</H>
-      <H size="h2">Привет мир!</H>
-      <H size="h3">Привет мир!</H>
-      <Counter />
-      <Button color="primary">Primary button</Button>
-      <Button color="white" arrowImg>
-        Button with arrow
-      </Button>
-      <Button color="white">Button without arrow</Button>
-      <P size="L">Large</P>
-      <P size="M">Medium</P>
-      <P size="S">Small</P>
-      <Tag largeSize color="primary" link="http://www.google.com">
-        primary
-      </Tag>
-      <Tag color="white">white</Tag>
-      <Tag color="blue" largeSize>
-        blue
-      </Tag>
-      <Tag color="red" link="http://www.google.com">
-        red
-      </Tag>
-      <Tag color="gray">gray</Tag>
-      <Rating isEditable rating={rating} setRating={setRating} />
-      <h2 style={{ color: "#00b900" }}>Main (app/page.tsx)</h2> */}
     </div>
   );
 }

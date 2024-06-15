@@ -1,9 +1,11 @@
 .wrapper {
   display: grid;
+  min-height: 100vh;
   grid-template:
-    "sidebar body body body body" 100px
-    "footer footer footer footer footer" 60px
-    / 1fr 1fr 1fr 1fr 1fr;
+    "sidebar" auto
+    "body" 1fr
+    "footer" auto
+    / minmax(320px, 1fr);
 }
 
 .header {
@@ -13,7 +15,7 @@
 
 .body {
   grid-area: body;
-  background-color: rgb(216 139 139);
+  background-color: rgb(182 210 192);
 }
 
 .sidebar {
@@ -23,5 +25,14 @@
 
 .footer {
   grid-area: footer;
-  background-color: rgb(234 234 135);
+}
+
+@media (width >= 768px) {
+  .wrapper {
+    gap: 0 30px;
+    grid-template:
+      ". sidebar body ." 1fr
+      "footer footer footer footer" auto
+      / auto 250px minmax(320px, 1200px) auto;
+  }
 }
